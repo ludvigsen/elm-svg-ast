@@ -2,6 +2,9 @@ module SvgAst exposing (Attributes, Key, SvgAst(..), Value(..), DElement(..), ma
 
 {-|
 # SvgAst
+
+Module for parsing and building up an Ast of an SVG. Can also serialize and deserialize to JSON.
+
 @docs Attributes, DElement, Key, SvgAst, Value, map, changeAttribute, fold, getStringAttribute, updateAttribute, getAttributeString
 -}
 
