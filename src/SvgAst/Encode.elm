@@ -1,5 +1,11 @@
 module SvgAst.Encode exposing (encode)
 
+{-|
+# Encode an SvgAst
+
+@docs encode
+-}
+
 import SvgAst as S
 import Json.Encode as JE
 import Dict exposing (Dict, toList)
@@ -27,6 +33,9 @@ encodeAttribute (key, value) =
        , ("value", encodeValue value)
         ]
 
+
+{-| Encode an SvgAst
+-}
 encode : S.SvgAst -> JE.Value
 encode ast =
     case ast of

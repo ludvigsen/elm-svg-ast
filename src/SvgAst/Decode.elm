@@ -1,5 +1,11 @@
 module SvgAst.Decode exposing (decode)
 
+{-|
+# Decode an SvgAst
+
+@docs decode
+-}
+
 import SvgAst as S
 import Json.Decode as JD
 import Dict exposing (Dict, fromList)
@@ -32,6 +38,8 @@ decodeAttributes : JD.Decoder (Dict S.Key S.Value)
 decodeAttributes =
     JD.map fromList <| JD.list decodeAttribute
 
+{-| Decode an SvgAst
+-}
 decode: JD.Decoder S.SvgAst
 decode =
     JD.map3 S.Tag
